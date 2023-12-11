@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "devDependencies": {
+    "grunt": "1.6.1",
+    "grunt-contrib-qunit": "8.0.1",
+    "puppeteer": "21.3.4"
+  },
+  "scripts": {
+    "test": "grunt"
+  }
+}

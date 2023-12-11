@@ -1,0 +1,54 @@
+
+#
+# Docs: https://jekyllrb.com/docs/configuration/
+title: QUnit
+description: The powerful, easy-to-use JavaScript testing framework.
+url: "https://api.qunitjs.com"
+baseurl: ""
+permalink: /:title/
+lang: en
+timezone: UTC
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  toc_levels: "1,2"
+sass:
+  # https://jekyllrb.com/docs/assets/#sassscss
+  style: compressed
+  sourcemap: never
+exclude:
+  # Don't include these files in the website
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - CONTRIBUTING.md
+  - vendor
+  - build
+
+# Theme settings
+#
+# Amethyst theme options are documented at:
+# https://github.com/qunitjs/jekyll-theme-amethyst/blob/main/docs/config.md
+#
+theme: jekyll-theme-amethyst
+amethyst:
+  # We keep a classic ICO file as well, for compat with de-facto standard
+  # machine discovery, e.g. search engines and analytics software.
+  favicon: /favicon.svg
+  home_href: https://qunitjs.com
+  header_logo:
+    src: /img/logo-with-colored-text.svg
+    width: 250
+    height: 72
+  edituri_base: https://github.com/qunitjs/qunit/blob/main/docs/
+  release_base: https://github.com/qunitjs/qunit/releases/tag/
+  mastodon: https://fosstodon.org/@qunit
+  twitter: qunitjs
+  github: qunitjs
+  gitter: qunitjs/qunit
+  typesense:
+    origin: https://typesense.jquery.com
+    collection: qunitjs_com
+    search_only_api_key: Zh8mMgohXECel9wjPwqT7lekLSG3OCgz
+

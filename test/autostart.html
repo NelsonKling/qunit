@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>autostart</title>
+  <link rel="stylesheet" href="../qunit/qunit.css">
+</head>
+<body>
+  <div id="qunit"></div>
+  <script src="../qunit/qunit.js"></script>
+  <script>
+  window.times = {};
+
+  (function () {
+    var asyncDelay = 1000;
+
+    QUnit.config.autostart = false;
+
+    // Mark the current time
+    window.times.autostartOff = Date.now();
+
+    // Simulate a delay in loading the tests, as when they are loaded
+    // asynchronously using requirejs, steal, etc.
+    setTimeout(function () {
+      var script = document.createElement('script');
+      script.src = 'autostart.js';
+      document.getElementsByTagName('head')[0].appendChild(script);
+    }, asyncDelay);
+
+    QUnit.begin(function (data) {
+      window.beginData = data;
+      window.times.runStarted = Date.now();
+    });
+  }());
+  </script>
+</body>
+</html>
